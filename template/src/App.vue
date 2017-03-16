@@ -1,17 +1,23 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    {{#router}}
-    <router-view></router-view>
-    {{else}}
-    <hello></hello>
-    {{/router}}
+    <div class="col-md-6">
+      <img src="./assets/logo.png">
+      {{#router}}
+      <router-view></router-view>
+      {{else}}
+      <hello></hello>
+      {{/router}}
+    </div>
+    <div class="col-md-6">
+      <p>FontAwesome is available <i class="fa fa-exclamation" aria-hidden="true"></i></p>
+      <p><a href="#" data-toggle="tooltip" v-on:click.stop.prevent title="Hooray!">Bootstrap is available</a> <i class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></i></p>
+    </div>
   </div>
 </template>
 
 <script>
 {{#unless router}}
-import Hello from './components/Hello'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import Hello from './components/hello/Hello.vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 {{/unless}}
 export default {
@@ -22,7 +28,14 @@ export default {
 }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 </script>
 
-<style>
+<style lang="scss">
+// bootstrap
+$icon-font-path: "../node_modules/bootstrap-sass/assets/fonts/bootstrap/";
+@import './node_modules/bootstrap-sass/assets/stylesheets/_bootstrap';
+
+// font awesome
+$fa-font-path: '../node_modules/font-awesome/fonts/';
+@import '../node_modules/font-awesome/scss/font-awesome';
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

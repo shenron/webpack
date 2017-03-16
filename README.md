@@ -4,6 +4,19 @@
 
 > This template is Vue 2.0 compatible. For Vue 1.x use this command: `vue init webpack#1.0 my-project`
 
+## This template contains:
+- font-awesome
+- bootstrap-sass, boostrap with javascript (for tooltip and co ...) and fonts
+- chai dependencies for testing with `assert`
+- html-loader, scss-loader to split vue compoment in more files :
+```
+myComponent/
+  myComponent.js
+  myComponent.vue
+  myComponent.scss
+  myComponent.html
+```
+
 ## Documentation
 
 - [For this template](http://vuejs-templates.github.io/webpack): common questions specific to this template are answered and each part is described in greater detail
