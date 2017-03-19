@@ -7,9 +7,10 @@ var baseConfig = require('./webpack.base.conf')
 
 var webpackConfig = merge(baseConfig, {
   // use inline sourcemap for karma-sourcemap-loader
-  module: {
-    rules: utils.styleLoaders()
-  },
+  // Fix scss conflicts with webpack.dev.conf
+  //module: {
+  //  rules: utils.styleLoaders()
+  //},
   devtool: '#inline-source-map',
   plugins: [
     new webpack.DefinePlugin({

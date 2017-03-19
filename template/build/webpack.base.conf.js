@@ -37,7 +37,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loaders: ['style-loader', 'css-loader', 'sass-loader']
+        loaders: ['vue-style-loader', 'css-loader', 'sass-loader']
       },
       {{#lint}}
       {
