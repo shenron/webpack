@@ -5,7 +5,7 @@
       {{#router}}
       <router-view></router-view>
       {{else}}
-      <hello></hello>
+      <helloWorld></helloWorld>
       {{/router}}
     </div>
     <div class="col-md-6">
@@ -17,13 +17,13 @@
 
 <script>
 {{#unless router}}
-import Hello from './components/hello/Hello.vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import HelloWorld from './components/hello_world/HelloWorld.vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 {{/unless}}
 export default {
   name: 'app'{{#router}}{{#if_eq lintConfig "airbnb"}},{{/if_eq}}{{else}},
   components: {
-    Hello{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+    HelloWorld{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
   }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}{{/router}}
 }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 </script>
