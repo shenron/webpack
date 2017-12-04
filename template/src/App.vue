@@ -10,8 +10,8 @@
     </div>
     <div class="col-md-6">
       <p>FontAwesome is available <i class="fa fa-exclamation" aria-hidden="true"></i></p>
-      <p><a href="#" data-toggle="tooltip" v-on:click.stop.prevent title="Hooray!">Bootstrap is available</a> <i class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></i></p>
     </div>
+      <p><a href="#" data-toggle="tooltip" v-on:click.stop.prevent title="Hooray!">Bootstrap is available</a> <span class="glyphicon glyphicon-heart"></span></p>
   </div>
 </template>
 
