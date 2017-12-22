@@ -9,8 +9,7 @@ describe('HelloWorld.vue', () => {
     expect(vm.$el.querySelector('.hello h1').textContent)
     {{#if_eq runner "karma"}}.to.equal('Welcome to Your Vue.js App'){{/if_eq}}{{#if_eq runner "jest"}}.toEqual('Welcome to Your Vue.js App'){{/if_eq}}
   })
-})
   {{#if_eq runner "karma"}}it('assert should be installed', () => {
     assert.isTrue(true){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-  }){{#if_eq lintConfig "airbnb"}};{{/if_eq}}{{/if_eq}}
-}){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+  }){{/if_eq}}
+})

@@ -35,7 +35,7 @@ module.exports = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'jquery': path.resolve(__dirname, '../node_modules/jquery/src/jquery'),
-      'bootstrap-js': path.resolve(__dirname, '../node_modules/bootstrap/dist/js/bootstrap'),
+      'bootstrap-js': path.resolve(__dirname, '../node_modules/bootstrap-sass/assets/javascripts/bootstrap'),
       {{#if_eq build "standalone"}}
       'vue$': 'vue/dist/vue.esm.js',
       {{/if_eq}}
