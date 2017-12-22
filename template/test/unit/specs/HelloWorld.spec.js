@@ -1,5 +1,6 @@
-import Vue from 'vue'
-import HelloWorld from '@/components/HelloWorld'
+import Vue from 'vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import HelloWorld from '@/components/hello_world/HelloWorld.vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import 'bootstrap-sass/assets/javascripts/bootstrap'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 describe('HelloWorld.vue', () => {
   it('should render correct contents', () => {
@@ -9,3 +10,7 @@ describe('HelloWorld.vue', () => {
     {{#if_eq runner "karma"}}.to.equal('Welcome to Your Vue.js App'){{/if_eq}}{{#if_eq runner "jest"}}.toEqual('Welcome to Your Vue.js App'){{/if_eq}}
   })
 })
+  {{#if_eq runner "karma"}}it('assert should be installed', () => {
+    assert.isTrue(true){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+  }){{#if_eq lintConfig "airbnb"}};{{/if_eq}}{{/if_eq}}
+}){{#if_eq lintConfig "airbnb"}};{{/if_eq}}

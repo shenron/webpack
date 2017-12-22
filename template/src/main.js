@@ -7,6 +7,9 @@ import App from './App'
 {{#router}}
 import router from './router'
 {{/router}}
+// boostrap js has to be injected after jquery
+// eslint-disable-next-line
+import 'bootstrap-js'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 Vue.config.productionTip = false
 

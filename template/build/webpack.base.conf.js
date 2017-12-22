@@ -34,6 +34,8 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
+      'jquery': path.resolve(__dirname, '../node_modules/jquery/src/jquery'),
+      'bootstrap-js': path.resolve(__dirname, '../node_modules/bootstrap/dist/js/bootstrap'),
       {{#if_eq build "standalone"}}
       'vue$': 'vue/dist/vue.esm.js',
       {{/if_eq}}
@@ -42,6 +44,14 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.html$/,
+        loader: 'html-loader'
+      },
+      {
+        test: /\.scss$/,
+        loaders: ['vue-style-loader', 'css-loader', 'sass-loader']
+      },
       {{#lint}}
       ...(config.dev.useEslint ? [createLintingRule()] : []),
       {{/lint}}

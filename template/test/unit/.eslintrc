@@ -5,6 +5,7 @@
   },
   "globals": { {{#if_eq runner "karma"}}
     "expect": true,
+    "assert": true,
     "sinon": true{{/if_eq}}
   }
 }
